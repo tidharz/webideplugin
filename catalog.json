@@ -1,0 +1,11 @@
+{
+    "name" : "BuiLD Plugins Repository",
+    "plugins" : [
+        {
+            "name" : "import_build_prototype",
+            "description" : "Import BUILD prototype",
+            "path" : "/importprototype",
+            "version" : "1.0.0"
+        }
+    ]
+}

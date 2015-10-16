@@ -1,0 +1,67 @@
+{
+	"name": "import_build_prototype",
+	"description": "Import SAP BuiLD prototype",
+	"i18n" : "import_build_prototype/i18n/i18n",
+    "requires": {
+        "services": [
+            "template",
+            "wizard",
+            "destination"
+        ]
+    },
+    "provides": {
+        "services": {
+            "selectSourceStep" : {
+                "implements": "sap.watt.common.service.ui.WizardStep",
+                "module": "import_build_prototype/service/selectSourceStep"
+            }
+        },
+        "interfaces": {}
+    },
+    "configures": {
+        "services": {
+            "wizard:styles":[
+                {
+                    "uri" : "import_build_prototype/css/build.css"
+                }
+            ],
+            "destination:usages" : [
+                {
+                    "name" : "build_system",
+                    "path" : ""
+                }
+             ],
+             "template:templates": [
+                {
+                    "id": "build_import_prototype",
+                    "template": "import_build_prototype/template/main",
+                    "name": "{i18n>Config_template_buildproject_name}",
+                    "description": "{i18n>Config_template_buildproject_desc}",
+                    "path": "import_prototype_plugin/template",
+                    "fileName": "resources.zip",
+                    "modelFileName": "model.json",
+                    "modelRoot": "template",
+                    "icon": "sap-icon://watt/lucy",
+                    "internalOnly": false,
+                    "category": "buildproject",
+                    "wizardSteps": [
+                        "selectSourceStep"
+                    ],
+                    "templateType": "project",
+                    "version": "1.0.0",
+                    "orderPriority": 1000,
+                    "requiresNeoApp": true,
+                    "previewImage":"resources/BUILD-logo.svg"
+                }
+            ],
+            "template:categories": [
+                {
+                    "id": "buildproject",
+                    "name": "{i18n>Config_category_Build__Project_name}",
+                    "description": "{i18n>Config_category_Build__Project_desc}"
+                }
+            ]
+        }
+    },
+    "subscribes": {}
+}

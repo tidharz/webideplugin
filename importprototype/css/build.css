@@ -1,0 +1,17 @@
+.selectSourceHeaderLabel{
+    font-size: 1.5rem;
+    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    margin-bottom:0.5rem;
+}
+
+.selectPrototypeHeaderLabel{
+    margin-top:0.5rem;
+    font-size: 0.9rem;
+    font-weight: 100;
+    margin-bottom:0rem;
+}
+
+#sourceListBox {
+    margin-top: 0 !important
+}
